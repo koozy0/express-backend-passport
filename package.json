@@ -1,0 +1,25 @@
+{
+  "name": "express-backend-passport",
+  "version": "1.0.0",
+  "description": "Simple API created with express.js and passport.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "pm2 start ecosystem.config.js --env production",
+    "dev": "pm2 start ecosystem.config.js --env development",
+    "stop-all": "pm2 stop all",
+    "update-pm2": "pm2 update",
+    "dev-server": "nodemon ./src/server.js"
+  },
+  "author": "Koo Zheng Yu",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.5",
+    "pm2": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
