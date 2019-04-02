@@ -1,7 +1,9 @@
 require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const routes = require('./routes/routes');
 
 const app = express();
 
@@ -17,7 +19,8 @@ mongoose
   .then(_ => console.log('Connected to MongoDB...'))
   .catch(err => console.log('Error connecting to MongoDB', err));
 
-app.get('/', (req, res) => res.send('Hello World!'));
+// Mount routes
+app.use(routes);
 
 const port = process.env.PORT || 4000;
 
